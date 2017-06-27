@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="tz.css"  rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="tz.js"></script>
+  </head>
+  <body>   
+    <div id="addDialog" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Оставьте заявку:</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="author" class="control-label">Автор:</label>
+                            <input type="text" required class="form-control" id="author">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment" class="control-label">Комментарий:</label>
+                            <textarea class="form-control" required id="comment"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+                    <button id="send" type="button" class="btn btn-primary">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+      <div id="blue-header">
+        <div>
+          <span class="glyphicon glyphicon-cog"></span>
+        </div>
+      </div>
+      <div id="gray-header"></div>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6"><big><b>Заявки</b></big></div>                                
+        <div class="col-sm-6"><button id="add" type="button" class="btn btn-default btn-xs glyphicon glyphicon-plus pull-right">Добавить</button></div>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Коментарий</th>
+            <th>Дата</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div id="counter"></div>
+    </main>
+    <footer>
+      <div>Данный сайт предназначен только для непромышленных целей</div>
+      <img src="atlassian.png">
+    </footer>
+  </body>
+</html>          
